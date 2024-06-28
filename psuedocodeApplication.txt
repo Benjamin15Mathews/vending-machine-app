@@ -1,0 +1,49 @@
+pseudocode application idea
+
+ main(){
+    new vendingMachine
+    vendingMachine.init()
+    new Scanner
+    int input = scanner.nextInt()
+
+    while (input != 3){
+        vendingMachine.printMainMenu()
+        input = scanner.nextInt()
+        if (input == 1){
+            vendingMachine.printInventory()
+            continue
+            }
+        if (input == 2){
+            while (input != 3){
+                vendingMachine.printPurchaseMenu()
+                input = scanner.nextInt()
+                if (input == 1){
+                    print "Amount in dollars to feed"
+                    input = scanner.nextInt()
+                    vendingMachine.feedMoney(input)
+                    continue
+                }
+                if (input == 2){
+                    vendingMachine.printSelectMenu()
+                    input = scanner.nextInt()
+                    vendingMachine.makeSelection(input)
+                    continue
+                }
+                if (input != 3){
+                print "Invalid input"
+                }
+            }
+        vendingMachine.finishTransaction()
+        continue
+        }
+        if (input == 4){
+        vendingMachine.writeSalesReport()
+        continue
+        }
+        if (input != 3){
+        print "Invalid input"
+        }
+    }
+    print "Thank you"
+    input.close()
+}
